@@ -1,0 +1,93 @@
+setting auto_restore_mw_cel_lib_setup true
+Initializing gui preferences from file  /u/sai9/.synopsys_dv_prefs.tcl
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> set top_design adder_1a.tcl
+adder_1a.tcl
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> 
+dc_shell> set lib_dir /pkgs/synopsys/2020/32_28nm/SAED32_EDK
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK
+dc_shell> set top_design adder_1a
+adder_1a
+dc_shell> set rtl_list [list ../rtl/$top_design.sv ]
+../rtl/adder_1a.sv
+dc_shell> set slow_corner "ss0p95v125c"
+ss0p95v125c
+dc_shell> set lib_types "stdcell_rvt"
+stdcell_rvt
+dc_shell> set sub_lib_type "saed32rvt_"
+saed32rvt_
+dc_shell> 
+dc_shell> #Normally created in dc-get-timlibs.tcl
+dc_shell> set search_path "$lib_dir/lib/$lib_types/db_nldm ."
+/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm .
+dc_shell> set synthetic_library dw_foundation.sldb
+dw_foundation.sldb
+dc_shell> set link_library "${sub_lib_type}${slow_corner}.db $synthetic_library *"
+saed32rvt_ss0p95v125c.db dw_foundation.sldb *
+dc_shell> set target_library "${sub_lib_type}${slow_corner}.db"
+saed32rvt_ss0p95v125c.db
+dc_shell> 
+dc_shell> #After this:
+dc_shell> #search_path    = "/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm ."
+dc_shell> #link_library   = "saed32rvt_ss0p95v125c.db dw_foundation.sldb *"
+dc_shell> #target_library = "saed32rvt_ss0p95v125c.db"
+dc_shell> 
+dc_shell> # Analyzing the files for the design.  Set 'define SYNTHESIS for RTL read
+dc_shell> analyze $rtl_list -autoread -define SYNTHESIS
+== ANALYZE autoread all files ==
+
+Starting ANALYZE autoread mode...
+Warning: Defining design library 'WORK' at directory '/u/sai9/ECE581-2023/lab3-vsai9/syn/work/WORK_autoread'. (AUTOREAD-107)
+Information: Adding '/u/sai9/ECE581-2023/lab3-vsai9/syn/rtl/adder_1a.sv'.  (AUTOREAD-100)
+Information: Scanning file { adder_1a.sv }. (AUTOREAD-303)
+Compiling source file /u/sai9/ECE581-2023/lab3-vsai9/syn/rtl/adder_1a.sv
+Presto compilation completed successfully.
+Autoread command completed successfully.
+1
+dc_shell> 
+dc_shell> # Elaborate the FIFO design
+dc_shell> elaborate ${top_design}
+Loading db file '/pkgs/synopsys/2020/32_28nm/SAED32_EDK/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/dw_foundation.sldb'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/gtech.db'
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/standard.sldb'
+  Loading link library 'saed32rvt_ss0p95v125c'
+  Loading link library 'gtech'
+Running PRESTO HDLC
+Presto compilation completed successfully. (adder_1a)
+Elaborated 1 design.
+Current design is now 'adder_1a'.
+Information: Building the design 'FA'. (HDL-193)
+Presto compilation completed successfully. (FA)
+1
+dc_shell> 
+dc_shell> gui_start
+Current design is 'adder_1a'.
+4.1
+Current design is 'adder_1a'.
+dc_shell> 
+Loading db file '/pkgs/synopsys/2020/design_compiler/syn/Q-2019.12-SP3/libraries/syn/generic.sdb'
+dc_shell> # Changes RTL instance names to be better for synthesis tools
+dc_shell> change_names -rules verilog -hierarchy
+1
+dc_shell> # Load the timing and design constraints
+dc_shell> source -echo -verbose ../../constraints/${top_design}.sdc
+set_max_delay -from [all_inputs ] -to [all_outputs] 0
+1
+1
+dc_shell> # any additional non-design specific constraints
+dc_shell> set_max_transition 0.5 [current_design ]
+Current design is 'adder_1a'.
+1
+dc_shell> # Duplicate any non-unique modules so details can be different inside for synthesis
+dc_shell> set_dont_use [get_lib_cells */DELLN* ]
+1
+dc_shell> uniquify

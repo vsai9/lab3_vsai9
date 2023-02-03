@@ -1,0 +1,161 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/u/sai9/ECE581-2023/lab3-vsai9/sim/work
+T_opt
+!s110 1675401902
+VUJ_l]4RFnP]C3=NB^Y3^D3
+04 3 4 work top fast 0
+=1-525400b63b2a-63dc9aad-d7836-16ca
+o-quiet -auto_acc_if_foreign -work work -debugdb
+Z1 tCvgOpt 0
+n@_opt
+OL;O;10.6b;65
+vadder_1a
+Z2 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+!s110 1675401569
+!i10b 1
+!s100 G@=Af=?dUZ]]jcfR>Hl162
+IbZ`jW?LNlb@N4?hb2SYV13
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 adder_1a_sv_unit
+S1
+R0
+w1675390063
+8../../syn/rtl/adder_1a.sv
+F../../syn/rtl/adder_1a.sv
+L0 3
+Z4 OL;L;10.6b;65
+r1
+!s85 0
+31
+!s108 1675401569.000000
+!s107 ../../syn/rtl/adder_1a.sv|
+!s90 ../../syn/rtl/adder_1a.sv|
+!i113 0
+Z5 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vadder_1b
+R2
+!s110 1675401786
+!i10b 1
+!s100 JUkNFDbNDBI1_AUQHH4Em0
+IggV0@WcFLRJ]zG@5kCVDe0
+R3
+!s105 adder_1b_sv_unit
+S1
+R0
+w1675391758
+8../../syn/rtl/adder_1b.sv
+F../../syn/rtl/adder_1b.sv
+L0 3
+R4
+r1
+!s85 0
+31
+!s108 1675401786.000000
+!s107 ../../syn/rtl/adder_1b.sv|
+!s90 ../../syn/rtl/adder_1b.sv|
+!i113 0
+R5
+R1
+vadder_1c
+R2
+Z6 !s110 1675401837
+!i10b 1
+!s100 YQDAYQ0zKJBo8^7XFdmRj3
+I^J=HD678Q1CgB5U@BCTnP1
+R3
+Z7 !s105 adder_1c_sv_unit
+S1
+R0
+Z8 w1675393171
+Z9 8../../syn/rtl/adder_1c.sv
+Z10 F../../syn/rtl/adder_1c.sv
+L0 2
+R4
+r1
+!s85 0
+31
+Z11 !s108 1675401837.000000
+Z12 !s107 ../../syn/rtl/adder_1c.sv|
+Z13 !s90 ../../syn/rtl/adder_1c.sv|
+!i113 0
+R5
+R1
+vadder_1d
+R2
+Z14 !s110 1675401897
+!i10b 1
+!s100 ImMIW86D`b>I7TiMGC=<N1
+IHbWjfKAKjYIQ@K[i:5b;[2
+R3
+!s105 adder_1d_sv_unit
+S1
+R0
+w1675393873
+8../../syn/rtl/adder_1d.sv
+F../../syn/rtl/adder_1d.sv
+L0 3
+R4
+r1
+!s85 0
+31
+Z15 !s108 1675401897.000000
+!s107 ../../syn/rtl/adder_1d.sv|
+!s90 ../../syn/rtl/adder_1d.sv|
+!i113 0
+R5
+R1
+vFA
+R2
+R6
+!i10b 1
+!s100 _4l[nZeM9b^d99RQ^0_X02
+IVMYARLHGJc1PE9T<K_]lL2
+R3
+R7
+S1
+R0
+R8
+R9
+R10
+L0 21
+R4
+r1
+!s85 0
+31
+R11
+R12
+R13
+!i113 0
+R5
+R1
+n@f@a
+vtop
+R14
+!i10b 1
+!s100 4HR3<9>keKOCG=ikEKe5l1
+IeTzgSeFzngDma=7iFlOC30
+R3
+R0
+w1675401769
+8../rtl/adder_1d_tb.v
+F../rtl/adder_1d_tb.v
+L0 2
+R4
+r1
+!s85 0
+31
+R15
+!s107 ../rtl/adder_1d_tb.v|
+!s90 ../rtl/adder_1d_tb.v|
+!i113 0
+R5
+R1
